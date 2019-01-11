@@ -37,14 +37,6 @@ object TestDataFactory {
         return list
     }
 
-    private fun makeDataSkillRankList(count: Int = 100): List<SkillRank> {
-        val list = mutableListOf<SkillRank>()
-        for (i in 1 until count) {
-            list.add(makeDataSkillRank())
-        }
-        return list
-    }
-
     private fun makeDataCraftingCostList(count: Int = 100): List<CraftingCost> {
         val list = mutableListOf<CraftingCost>()
         for (i in 1 until count) {
@@ -86,17 +78,9 @@ object TestDataFactory {
         return Skill(
             Math.random().toInt(),
             UUID.randomUUID().toString(),
-            UUID.randomUUID().toString(),
-            UUID.randomUUID().toString(),
-            makeDataSkillRankList()
-        )
-    }
-
-    private fun makeDataSkillRank(): SkillRank {
-        return SkillRank(
             Math.random().toInt(),
             UUID.randomUUID().toString(),
-            Math.random().toInt(),
+            emptyList(),
             Math.random().toInt(),
             UUID.randomUUID().toString()
         )
@@ -126,8 +110,8 @@ object TestDataFactory {
         )
     }
 
-    private fun makeDataAsset(): Assets {
-        return Assets(
+    private fun makeDataAsset(): ArmorAsset {
+        return ArmorAsset(
             UUID.randomUUID().toString(),
             UUID.randomUUID().toString()
         )

@@ -12,7 +12,7 @@ data class Weapon(
     @JsonProperty("slots") val slotList: List<Slot>,
     @JsonProperty("elements") val elementList: List<Any>,
     @JsonProperty("crafting") val crafting: Any,
-    @JsonProperty("assets") val assets: Any,
+    @JsonProperty("assets") val weaponAsset: WeaponAsset,
     @JsonProperty("sharpness") val sharpness: Any,
     @JsonProperty("durability") val durability: Any
 )

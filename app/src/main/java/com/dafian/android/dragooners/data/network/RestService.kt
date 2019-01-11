@@ -6,6 +6,9 @@ import retrofit2.http.GET
 
 interface RestService {
 
+    @GET("/weapons")
+    fun getWeaponAll(): Deferred<List<Weapon>>
+
     @GET("/armor")
     fun getArmorAll(): Deferred<List<Armor>>
 
@@ -17,7 +20,4 @@ interface RestService {
 
     @GET("/skills")
     fun getSkillAll(): Deferred<List<Skill>>
-
-    @GET("weapons")
-    fun getWeaponAll(): Deferred<List<Weapon>>
 }
