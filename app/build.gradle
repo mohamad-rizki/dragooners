@@ -44,9 +44,6 @@ dependencies {
     // ANKO
     implementation "org.jetbrains.anko:anko:$anko_version"
     implementation "org.jetbrains.anko:anko-commons:$anko_version"
-    implementation "org.jetbrains.anko:anko-design:$anko_version"
-    implementation "org.jetbrains.anko:anko-recyclerview-v7:$anko_version"
-    implementation "org.jetbrains.anko:anko-sqlite:$anko_version"
 
     // SUPPORT
     implementation "com.android.support:appcompat-v7:$support_version"
@@ -69,8 +66,8 @@ dependencies {
     implementation "android.arch.lifecycle:runtime:$lifecycle_version"
 
     // NAVIGATION
-    implementation 'android.arch.navigation:navigation-fragment-ktx:1.0.0-alpha11'
-    implementation 'android.arch.navigation:navigation-ui-ktx:1.0.0-alpha11'
+    implementation "android.arch.navigation:navigation-fragment-ktx:$navigation_version"
+    implementation "android.arch.navigation:navigation-ui-ktx:$navigation_version"
 
     // IMAGE
     implementation "com.github.bumptech.glide:glide:$glide_version"
@@ -83,13 +80,13 @@ dependencies {
     // LOG
     implementation "com.jakewharton.timber:timber:$timber_version"
 
-    testImplementation 'junit:junit:4.12'
+    testImplementation "junit:junit:4.12"
     testImplementation "org.koin:koin-test:$koin_version"
     testImplementation "org.mockito:mockito-core:$mockito_version"
     testImplementation "com.squareup.okhttp3:mockwebserver:$okhttp_version"
 
-    androidTestImplementation 'com.android.support.test:rules:1.0.2'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation "com.android.support.test:rules:1.0.2"
+    androidTestImplementation "com.android.support.test:runner:1.0.2"
     androidTestImplementation "org.mockito:mockito-android:$mockito_version"
     androidTestImplementation "com.android.support.test.espresso:espresso-core:$espresso_version"
     androidTestImplementation "com.android.support.test.espresso:espresso-intents:$espresso_version"
