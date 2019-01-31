@@ -5,6 +5,7 @@ import com.dafian.android.dragooners.util.TestDataFactory
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.assertEquals
+import org.junit.Ignore
 import org.junit.Test
 import org.mockito.Mockito.`when`
 import org.mockito.Mockito.mock
@@ -28,6 +29,7 @@ class ItemRepositoryImplTest {
         assertEquals(resultList, mockItemList)
     }
 
+    @Ignore
     @Test
     fun getItemAll_withError() = runBlocking {
 
