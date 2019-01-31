@@ -1,7 +1,8 @@
-package com.dafian.android.dragooners
+package com.dafian.android.dragooners.presentation.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.dafian.android.dragooners.R
 
 class MainActivity : AppCompatActivity() {
 
