@@ -31,7 +31,7 @@ class ArmorRepositoryImplTest {
     @Test
     fun getArmorAll_withError() = runBlocking {
 
-        val mockError = IllegalArgumentException("Something error")
+        val mockError = Throwable("Something error")
 
         `when`(service.getArmorAll())
             .thenThrow(mockError)

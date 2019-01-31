@@ -31,7 +31,7 @@ class ItemRepositoryImplTest {
     @Test
     fun getItemAll_withError() = runBlocking {
 
-        val mockError = IllegalArgumentException("Something error")
+        val mockError = Throwable("Something error")
 
         `when`(service.getItemAll())
             .thenThrow(mockError)
