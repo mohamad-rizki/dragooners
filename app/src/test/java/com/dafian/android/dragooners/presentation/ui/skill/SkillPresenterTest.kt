@@ -1,7 +1,7 @@
 package com.dafian.android.dragooners.presentation.ui.skill
 
-import com.dafian.android.dragooners.domain.repository.SkillRepository
 import com.dafian.android.dragooners.presentation.base.BaseViewState
+import com.dafian.android.dragooners.usecase.GetSkillAllUseCase
 import com.dafian.android.dragooners.util.TestDataFactory
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.launch
@@ -18,9 +18,9 @@ import org.mockito.junit.MockitoJUnitRunner
 @RunWith(MockitoJUnitRunner.StrictStubs::class)
 class SkillPresenterTest {
 
-    private val repository = Mockito.mock(SkillRepository::class.java)
+    private val useCase = Mockito.mock(GetSkillAllUseCase::class.java)
 
-    private val presenter = SkillPresenter(repository)
+    private val presenter = SkillPresenter(useCase)
 
     @Test
     fun getSkillAll_withSuccess() = runBlocking {
@@ -29,7 +29,7 @@ class SkillPresenterTest {
         val viewStateChannel = presenter.viewStates
         val actualStates = mutableListOf<BaseViewState>()
 
-        `when`(repository.getSkillAll())
+        `when`(useCase.getSkillAll())
             .thenReturn(CompletableDeferred(expectedResponse))
 
         launch {
@@ -44,7 +44,7 @@ class SkillPresenterTest {
         assertEquals((actualStates[1] as SkillContract.SkillViewState.ResultStateSkill).skillList, expectedResponse)
     }
 
-    @Ignore
+    @Ignore("Error exist")
     @Test
     fun getSkillAll_withError() = runBlocking {
 

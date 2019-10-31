@@ -1,7 +1,7 @@
 package com.dafian.android.dragooners.presentation.ui.armor
 
-import com.dafian.android.dragooners.domain.repository.ArmorRepository
 import com.dafian.android.dragooners.presentation.base.BaseViewState
+import com.dafian.android.dragooners.usecase.GetArmorAllUseCase
 import com.dafian.android.dragooners.util.TestDataFactory
 import junit.framework.TestCase.assertTrue
 import kotlinx.coroutines.CompletableDeferred
@@ -18,9 +18,9 @@ import org.mockito.junit.MockitoJUnitRunner
 @RunWith(MockitoJUnitRunner.StrictStubs::class)
 class ArmorPresenterTest {
 
-    private val repository = mock(ArmorRepository::class.java)
+    private val useCase = mock(GetArmorAllUseCase::class.java)
 
-    private val presenter = ArmorPresenter(repository)
+    private val presenter = ArmorPresenter(useCase)
 
     @Test
     fun getArmorAll_withSuccess() = runBlocking {
@@ -29,7 +29,7 @@ class ArmorPresenterTest {
         val viewStateChannel = presenter.viewStates
         val actualStates = mutableListOf<BaseViewState>()
 
-        `when`(repository.getArmorAll())
+        `when`(useCase.getArmorAll())
             .thenReturn(CompletableDeferred(expectedResponse))
 
         launch {
@@ -44,7 +44,7 @@ class ArmorPresenterTest {
         assertEquals((actualStates[1] as ArmorContract.ArmorViewState.ResultStateArmor).armorList, expectedResponse)
     }
 
-    @Ignore
+    @Ignore("Error exist")
     @Test
     fun getArmorAll_withError() = runBlocking {
 

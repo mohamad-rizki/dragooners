@@ -1,6 +1,6 @@
 package com.dafian.android.dragooners.domain.repository
 
-import com.dafian.android.dragooners.domain.entity.Skill
+import com.dafian.android.dragooners.domain.model.Skill
 import kotlinx.coroutines.Deferred
 
 interface SkillRepository {

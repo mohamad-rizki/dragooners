@@ -1,7 +1,7 @@
 package com.dafian.android.dragooners.presentation.ui.item
 
-import com.dafian.android.dragooners.domain.repository.ItemRepository
 import com.dafian.android.dragooners.presentation.base.BaseViewState
+import com.dafian.android.dragooners.usecase.GetItemAllUseCase
 import com.dafian.android.dragooners.util.TestDataFactory
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.launch
@@ -18,9 +18,9 @@ import org.mockito.junit.MockitoJUnitRunner
 @RunWith(MockitoJUnitRunner.StrictStubs::class)
 class ItemPresenterTest {
 
-    private val repository = Mockito.mock(ItemRepository::class.java)
+    private val useCase = Mockito.mock(GetItemAllUseCase::class.java)
 
-    private val presenter = ItemPresenter(repository)
+    private val presenter = ItemPresenter(useCase)
 
     @Test
     fun getItemAll_withSuccess() = runBlocking {
@@ -29,7 +29,7 @@ class ItemPresenterTest {
         val viewStateChannel = presenter.viewStates
         val actualStates = mutableListOf<BaseViewState>()
 
-        `when`(repository.getItemAll())
+        `when`(useCase.getItemAll())
             .thenReturn(CompletableDeferred(expectedResponse))
 
         launch {
@@ -44,7 +44,7 @@ class ItemPresenterTest {
         assertEquals((actualStates[1] as ItemContract.ItemViewState.ResultStateItem).itemList, expectedResponse)
     }
 
-    @Ignore
+    @Ignore("Error exist")
     @Test
     fun getItemAll_withError() = runBlocking {
 
