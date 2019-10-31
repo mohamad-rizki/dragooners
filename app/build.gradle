@@ -36,63 +36,63 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     // KOTLIN
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutine_version"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutine_version"
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$rootProject.kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-reflect:$rootProject.kotlin_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$rootProject.coroutine_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$rootProject.coroutine_version"
 
     // ANKO
-    implementation "org.jetbrains.anko:anko:$anko_version"
-    implementation "org.jetbrains.anko:anko-commons:$anko_version"
+    implementation "org.jetbrains.anko:anko:$rootProject.anko_version"
+    implementation "org.jetbrains.anko:anko-commons:$rootProject.anko_version"
 
     // SUPPORT
-    implementation "androidx.appcompat:appcompat:$support_version"
-    implementation "androidx.cardview:cardview:$support_version"
+    implementation "androidx.appcompat:appcompat:$rootProject.support_version"
+    implementation "androidx.cardview:cardview:$rootProject.support_version"
 
     // WIDGET
-    implementation "com.google.android.material:material:$widget_version"
+    implementation "com.google.android.material:material:$rootProject.widget_version"
 
     // NETWORK
-    implementation "com.squareup.okhttp3:okhttp:$okhttp_version"
-    implementation "com.squareup.okhttp3:okhttp-urlconnection:$okhttp_version"
-    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp_version"
-    implementation "com.squareup.retrofit2:retrofit:$retrofit2_version"
-    implementation "com.squareup.retrofit2:converter-jackson:$retrofit2_version"
-    implementation "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:$retrofit2_coroutine_version"
-    implementation "com.fasterxml.jackson.core:jackson-databind:$jackson_version"
-    implementation "com.fasterxml.jackson.module:jackson-module-kotlin:$jackson_version"
+    implementation "com.squareup.okhttp3:okhttp:$rootProject.okhttp_version"
+    implementation "com.squareup.okhttp3:okhttp-urlconnection:$rootProject.okhttp_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:$rootProject.okhttp_version"
+    implementation "com.squareup.retrofit2:retrofit:$rootProject.retrofit2_version"
+    implementation "com.squareup.retrofit2:converter-jackson:$rootProject.retrofit2_version"
+    implementation "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:$rootProject.retrofit2_coroutine_version"
+    implementation "com.fasterxml.jackson.core:jackson-databind:$rootProject.jackson_version"
+    implementation "com.fasterxml.jackson.module:jackson-module-kotlin:$rootProject.jackson_version"
 
     // LIFECYCLE
-    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
-    implementation "androidx.lifecycle:lifecycle-runtime:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-extensions:$rootProject.lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-runtime:$rootProject.lifecycle_version"
 
     // NAVIGATION
-    implementation "android.arch.navigation:navigation-fragment-ktx:$navigation_version"
-    implementation "android.arch.navigation:navigation-ui-ktx:$navigation_version"
+    implementation "android.arch.navigation:navigation-fragment-ktx:$rootProject.navigation_version"
+    implementation "android.arch.navigation:navigation-ui-ktx:$rootProject.navigation_version"
 
     // IMAGE
-    implementation "com.github.bumptech.glide:glide:$glide_version"
-    kapt "com.github.bumptech.glide:compiler:$glide_version"
+    implementation "com.github.bumptech.glide:glide:$rootProject.glide_version"
+    kapt "com.github.bumptech.glide:compiler:$rootProject.glide_version"
 
     // DI
-    implementation "org.koin:koin-android:$koin_version"
-    implementation "org.koin:koin-android-viewmodel:$koin_version"
+    implementation "org.koin:koin-android:$rootProject.koin_version"
+    implementation "org.koin:koin-android-viewmodel:$rootProject.koin_version"
 
     // LOG
-    implementation "com.jakewharton.timber:timber:$timber_version"
+    implementation "com.jakewharton.timber:timber:$rootProject.timber_version"
 
     testImplementation "junit:junit:4.12"
-    testImplementation "org.koin:koin-test:$koin_version"
-    testImplementation "org.mockito:mockito-core:$mockito_version"
-    testImplementation "com.squareup.okhttp3:mockwebserver:$okhttp_version"
+    testImplementation "org.koin:koin-test:$rootProject.koin_version"
+    testImplementation "org.mockito:mockito-core:$rootProject.mockito_version"
+    testImplementation "com.squareup.okhttp3:mockwebserver:$rootProject.okhttp_version"
 
     androidTestImplementation "androidx.test:rules:1.1.1"
     androidTestImplementation "androidx.test:runner:1.1.1"
-    androidTestImplementation "org.mockito:mockito-android:$mockito_version"
-    androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_version"
-    androidTestImplementation "androidx.test.espresso:espresso-intents:$espresso_version"
-    androidTestImplementation "androidx.test.espresso:espresso-idling-resource:$espresso_version"
-    androidTestImplementation("androidx.test.espresso:espresso-contrib:$espresso_version") {
+    androidTestImplementation "org.mockito:mockito-android:$rootProject.mockito_version"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.espresso_version"
+    androidTestImplementation "androidx.test.espresso:espresso-intents:$rootProject.espresso_version"
+    androidTestImplementation "androidx.test.espresso:espresso-idling-resource:$rootProject.espresso_version"
+    androidTestImplementation("androidx.test.espresso:espresso-contrib:$rootProject.espresso_version") {
         exclude group: 'com.android.support', module: 'appcompat-v7'
         exclude group: 'com.android.support', module: 'support-v4'
         exclude group: 'com.android.support', module: 'design'
