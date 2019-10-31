@@ -1,6 +1,6 @@
 package com.dafian.android.dragooners.presentation.ui.armor
 
-import com.dafian.android.dragooners.domain.entity.Armor
+import com.dafian.android.dragooners.domain.model.Armor
 import com.dafian.android.dragooners.presentation.base.BasePresenter
 import com.dafian.android.dragooners.presentation.base.BaseView
 import com.dafian.android.dragooners.presentation.base.BaseViewState

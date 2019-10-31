@@ -1,7 +1,6 @@
 package com.dafian.android.dragooners
 
 import android.app.Application
-import com.dafian.android.dragooners.di.*
 import org.koin.android.ext.android.startKoin
 import timber.log.Timber
 
@@ -14,7 +13,12 @@ class BaseApplication : Application() {
 
         startKoin(
             this, listOf(
-                appModule, networkModule, localModule, domainModule, presenterModule
+                appModule,
+                dataModule,
+                domainModule,
+                remoteModule,
+                useCaseModule,
+                presenterModule
             )
         )
     }

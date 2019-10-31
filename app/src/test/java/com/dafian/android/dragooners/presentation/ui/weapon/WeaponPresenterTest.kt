@@ -1,7 +1,7 @@
 package com.dafian.android.dragooners.presentation.ui.weapon
 
-import com.dafian.android.dragooners.domain.repository.WeaponRepository
 import com.dafian.android.dragooners.presentation.base.BaseViewState
+import com.dafian.android.dragooners.usecase.GetWeaponAllUseCase
 import com.dafian.android.dragooners.util.TestDataFactory
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.launch
@@ -18,9 +18,9 @@ import org.mockito.junit.MockitoJUnitRunner
 @RunWith(MockitoJUnitRunner.StrictStubs::class)
 class WeaponPresenterTest {
 
-    private val repository = Mockito.mock(WeaponRepository::class.java)
+    private val useCase = Mockito.mock(GetWeaponAllUseCase::class.java)
 
-    private val presenter = WeaponPresenter(repository)
+    private val presenter = WeaponPresenter(useCase)
 
     @Test
     fun getWeaponAll_withSuccess() = runBlocking {
@@ -29,7 +29,7 @@ class WeaponPresenterTest {
         val viewStateChannel = presenter.viewStates
         val actualStates = mutableListOf<BaseViewState>()
 
-        `when`(repository.getWeaponAll())
+        `when`(useCase.getWeaponAll())
             .thenReturn(CompletableDeferred(expectedResponse))
 
         launch {
@@ -44,7 +44,7 @@ class WeaponPresenterTest {
         assertEquals((actualStates[1] as WeaponContract.WeaponViewState.ResultStateWeapon).weaponList, expectedResponse)
     }
 
-    @Ignore
+    @Ignore("Error exist")
     @Test
     fun getWeaponAll_withError() = runBlocking {
 

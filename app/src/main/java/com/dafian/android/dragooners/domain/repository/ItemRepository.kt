@@ -1,6 +1,6 @@
 package com.dafian.android.dragooners.domain.repository
 
-import com.dafian.android.dragooners.domain.entity.Item
+import com.dafian.android.dragooners.domain.model.Item
 import kotlinx.coroutines.Deferred
 
 interface ItemRepository {

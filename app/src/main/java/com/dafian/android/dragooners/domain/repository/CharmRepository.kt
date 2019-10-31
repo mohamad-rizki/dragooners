@@ -1,6 +1,6 @@
 package com.dafian.android.dragooners.domain.repository
 
-import com.dafian.android.dragooners.domain.entity.Charm
+import com.dafian.android.dragooners.domain.model.Charm
 import kotlinx.coroutines.Deferred
 
 interface CharmRepository {

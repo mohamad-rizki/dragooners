@@ -1,6 +1,6 @@
 package com.dafian.android.dragooners.presentation.ui.item
 
-import com.dafian.android.dragooners.domain.entity.Item
+import com.dafian.android.dragooners.domain.model.Item
 import com.dafian.android.dragooners.presentation.base.BasePresenter
 import com.dafian.android.dragooners.presentation.base.BaseView
 import com.dafian.android.dragooners.presentation.base.BaseViewState

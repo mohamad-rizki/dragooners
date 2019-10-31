@@ -1,6 +1,6 @@
 package com.dafian.android.dragooners.util
 
-import com.dafian.android.dragooners.domain.entity.*
+import com.dafian.android.dragooners.domain.model.*
 import java.util.*
 
 object TestDataFactory {

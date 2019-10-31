@@ -1,7 +1,7 @@
 package com.dafian.android.dragooners.presentation.ui.charm
 
-import com.dafian.android.dragooners.domain.repository.CharmRepository
 import com.dafian.android.dragooners.presentation.base.BaseViewState
+import com.dafian.android.dragooners.usecase.GetCharmAllUseCase
 import com.dafian.android.dragooners.util.TestDataFactory
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.launch
@@ -18,9 +18,9 @@ import org.mockito.junit.MockitoJUnitRunner
 @RunWith(MockitoJUnitRunner.StrictStubs::class)
 class CharmPresenterTest {
 
-    private val repository = Mockito.mock(CharmRepository::class.java)
+    private val useCase = Mockito.mock(GetCharmAllUseCase::class.java)
 
-    private val presenter = CharmPresenter(repository)
+    private val presenter = CharmPresenter(useCase)
 
     @Test
     fun getCharmAll_withSuccess() = runBlocking {
@@ -29,7 +29,7 @@ class CharmPresenterTest {
         val viewStateChannel = presenter.viewStates
         val actualStates = mutableListOf<BaseViewState>()
 
-        `when`(repository.getCharmAll())
+        `when`(useCase.getCharmAll())
             .thenReturn(CompletableDeferred(expectedResponse))
 
         launch {
@@ -44,7 +44,7 @@ class CharmPresenterTest {
         assertEquals((actualStates[1] as CharmContract.CharmViewState.ResultStateCharm).charmList, expectedResponse)
     }
 
-    @Ignore
+    @Ignore("Error exist")
     @Test
     fun getCharmAll_withError() = runBlocking {
 
