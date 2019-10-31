@@ -1,5 +1,5 @@
-Dragooners
-==========
+Dragooners Apps
+===============
 
 [![CircleCI](https://circleci.com/gh/mohamad-rizki/dragooners/tree/master.svg?style=svg)](https://circleci.com/gh/mohamad-rizki/dragooners/tree/master)
 
