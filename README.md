@@ -1,7 +1,5 @@
-Dragooners
-==========
-
-[![CircleCI](https://circleci.com/gh/mohamad-rizki/dragooners/tree/master.svg?style=svg)](https://circleci.com/gh/mohamad-rizki/dragooners/tree/master)
+Dragooners Apps
+===============
 
 Mobile Apps with Data from [Monster Hunter World DB](https://docs.mhw-db.com/)
 
