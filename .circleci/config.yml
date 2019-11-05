@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/code
     docker:
-      - image: circleci/android:api-29
+      - image: circleci/android:api-28
     environment:
       JVM_OPTS: -Xmx3g
     steps:
@@ -12,7 +12,7 @@ jobs:
           key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
       - run:
           name: Run Tests
-          command: ./gradlew lint test --parallel --stacktrace --no-daemon
+          command: ./gradlew clean test --parallel --stacktrace --no-daemon
       - save_cache:
           paths:
              - ~/.gradle
