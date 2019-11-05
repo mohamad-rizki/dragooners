@@ -5,7 +5,7 @@ import java.util.*
 
 object TestDataFactory {
 
-    fun makeDataArmorList(count: Int = 100): List<Armor> {
+    fun makeDataArmorList(count: Int = 10): List<Armor> {
         val list = mutableListOf<Armor>()
         for (i in 1 until count) {
             list.add(makeDataArmor())
@@ -13,7 +13,7 @@ object TestDataFactory {
         return list
     }
 
-    fun makeDataCharmList(count: Int = 100): List<Charm> {
+    fun makeDataCharmList(count: Int = 10): List<Charm> {
         val list = mutableListOf<Charm>()
         for (i in 1 until count) {
             list.add(makeDataCharm())
@@ -21,7 +21,7 @@ object TestDataFactory {
         return list
     }
 
-    fun makeDataItemList(count: Int = 100): List<Item> {
+    fun makeDataItemList(count: Int = 10): List<Item> {
         val list = mutableListOf<Item>()
         for (i in 1 until count) {
             list.add(makeDataItem())
@@ -29,7 +29,7 @@ object TestDataFactory {
         return list
     }
 
-    fun makeDataSkillList(count: Int = 100): List<Skill> {
+    fun makeDataSkillList(count: Int = 10): List<Skill> {
         val list = mutableListOf<Skill>()
         for (i in 1 until count) {
             list.add(makeDataSkill())
@@ -37,7 +37,7 @@ object TestDataFactory {
         return list
     }
 
-    fun makeDataWeaponList(count: Int = 100): List<Weapon> {
+    fun makeDataWeaponList(count: Int = 10): List<Weapon> {
         val list = mutableListOf<Weapon>()
         for (i in 1 until count) {
             list.add(makeDataWeapon())
@@ -45,7 +45,7 @@ object TestDataFactory {
         return list
     }
 
-    private fun makeDataSlotList(count: Int = 100): List<Slot> {
+    private fun makeDataSlotList(count: Int = 10): List<Slot> {
         val list = mutableListOf<Slot>()
         for (i in 1 until count) {
             list.add(makeDataSlot())
@@ -53,7 +53,7 @@ object TestDataFactory {
         return list
     }
 
-    private fun makeDataCraftingCostList(count: Int = 100): List<CraftingCost> {
+    private fun makeDataCraftingCostList(count: Int = 10): List<CraftingCost> {
         val list = mutableListOf<CraftingCost>()
         for (i in 1 until count) {
             list.add(makeDataCraftingCost())
@@ -61,7 +61,7 @@ object TestDataFactory {
         return list
     }
 
-    private fun makeDataCharmRankList(count: Int = 100): List<CharmRank> {
+    private fun makeDataCharmRankList(count: Int = 10): List<CharmRank> {
         val list = mutableListOf<CharmRank>()
         for (i in 1 until count) {
             list.add(makeDataCharmRank())
